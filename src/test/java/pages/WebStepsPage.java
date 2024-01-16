@@ -29,7 +29,7 @@ public class WebStepsPage {
     public void openIssuesTab(){
       gitHubPage.goIssues();
     }
-    @Step("Checking for a issue {issueName}")
+    @Step("Checking for a issue : {issueName}")
     public void shuldSeeIssueWitchName(String issueName){
         $(withText(issueName)).should(Condition.exist);
     }
