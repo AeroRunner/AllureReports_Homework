@@ -12,7 +12,7 @@ public class SelenidePureTest extends BaseTest {
     UserData userData = new UserData();
     @DisplayName("In repository 'eroshenkoam/allure-example' in GitHUB must be  Last Issue")
     @Test
-    public void findIssueNumber80inAllureExmple() {
+    public void searchLastIssueInRepositoryOnlySelenide() {
 
         SelenideLogger.addListener("allure",new AllureSelenide());
 

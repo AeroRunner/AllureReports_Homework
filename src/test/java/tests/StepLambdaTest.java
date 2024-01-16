@@ -15,7 +15,7 @@ public class StepLambdaTest extends BaseTest {
     StepsName stepName = new StepsName();
     @DisplayName("In repository 'eroshenkoam/allure-example' in GitHUB must be  Last Issue")
     @Test
-    public void findIssueNumber80inAllureExmple() {
+    public void searchLastIssueInRepositoryLambda() {
 
         SelenideLogger.addListener("allure",new AllureSelenide());
 
@@ -34,7 +34,7 @@ public class StepLambdaTest extends BaseTest {
     }
     @DisplayName("In repository 'eroshenkoam/allure-example' in GitHUB must be  Last Issue ")
     @Test
-    public void findIssueNumber80inAllureExmple2th() {
+    public void searchLastIssueInRepositoryLambda2th() {
 
         SelenideLogger.addListener("allure",new AllureSelenide());
 
