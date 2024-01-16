@@ -9,20 +9,20 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class GitHubPage {
-    UserData userData = new UserData();
     public SelenideElement
     searchButton= $(".header-search-button"),
     searchField = $("#query-builder-test"),
     issuesButton = $("#issues-tab");
+    public String homePage = "https://www.github.com";
     public GitHubPage openURL(){
-        open("https://www.github.com");
+        open(homePage);
         return this;
     }
     public GitHubPage openSearchField(){
         searchButton.click();
         return this;
     }
-    public GitHubPage useSearchField(String value){
+    public GitHubPage searchRepository(String value){
         searchField.setValue(value).submit();
         return this;
     }

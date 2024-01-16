@@ -4,22 +4,22 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.GitHubPage;
 import pages.UserData;
-
-import static com.codeborne.selenide.Selenide.$;
-
+@DisplayName("Only Selenide Test")
 public class SelenidePureTest extends BaseTest {
     GitHubPage gitHubPage = new GitHubPage();
     UserData userData = new UserData();
-    @DisplayName("In chapter 'Eroshenkoam' in GitHUB must be Issue N80")
+    @DisplayName("In repository 'eroshenkoam/allure-example' in GitHUB must be  Last Issue")
     @Test
     public void findIssueNumber80inAllureExmple() {
+
         SelenideLogger.addListener("allure",new AllureSelenide());
+
         gitHubPage.openURL();
         gitHubPage.openSearchField();
-        gitHubPage.useSearchField(userData.searchRequest);
-        gitHubPage.choosePage(userData.searchRequest);
+        gitHubPage.searchRepository(userData.repository);
+        gitHubPage.choosePage(userData.repository);
         gitHubPage.goIssues();
-        gitHubPage.chooseIssue(userData.issueNumber);
+        gitHubPage.chooseIssue(userData.issue);
 
 }
 }
