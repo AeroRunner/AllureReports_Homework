@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class GitHubPage {
+    
     public SelenideElement
     searchButton= $(".header-search-button"),
     searchField = $("#query-builder-test"),
