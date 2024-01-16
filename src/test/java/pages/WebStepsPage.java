@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class WebStepsPage {
     GitHubPage gitHubPage = new GitHubPage();
-    UserData data = new UserData();
     @Step("Open GitHub home page")
     public void openMainPage(){
         gitHubPage.openURL();
