@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
@@ -9,6 +10,8 @@ import pages.GitHubIssuesPage;
 import pages.GitHubRepositryPage;
 import pages.GitHubSearchPage;
 import utils.UserData;
+
+import static java.nio.channels.SocketChannel.open;
 
 @DisplayName("Only Selenide Test")
 public class SelenidePureTest extends BaseTest {

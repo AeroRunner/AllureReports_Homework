@@ -12,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class BaseTest {
     public static String size = "1920x1080";
     public static String loadStr = "eager";
+    public static String gitHubHomePage = "https://www.github.com";
 
     @BeforeAll
     public static void testsSetUP() {
@@ -21,6 +22,9 @@ public class BaseTest {
         });
         step("SetUP pageLoadStrategy = " + loadStr, () -> {
             Configuration.pageLoadStrategy = loadStr;
+        });
+        step(" Open home page GitHUB: " + gitHubHomePage, () -> {
+            Configuration.baseUrl = gitHubHomePage;
         });
 
     }
